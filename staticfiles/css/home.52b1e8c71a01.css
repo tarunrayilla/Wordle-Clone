@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    background-color: black;
+  }
+  
+  #container {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    height: 100%; */
+    display: flex;
+    background-color: black;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #wordle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+  }
+  
+  /* header {
+    border-bottom: 1px solid rgb(73, 72, 72);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  
+
+  header .navbar {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+  }
+
+  .navbar .toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+
+  .navbar .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  .menu {
+    width: 100%;
+  } */
+
+  .navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(221, 219, 219);
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(221, 219, 219);
+    border-radius: 10px;
+}
+
+  @media (max-width: 753px) {
+    .navbar .toggle-button {
+      display: flex;
+    }
+
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+
+    .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .navbar-links ul li {
+      text-align: center;
+    }
+
+    .navbar-links ul li a {
+      padding: .5rem 1rem;
+    }
+
+    #title {
+      font-size: 30px;
+    }
+
+    .navbar-links.active {
+      display: flex;
+    }
+  }
+
+  a{
+    text-decoration: none;
+    color: rgb(221, 219, 219);
+    font-size: 22px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  #title {
+    color: rgb(221, 219, 219);
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin: 4px;
+    margin-left: 30px;
+    /* text-align: center; */
+  }
+
+  #board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  #board {
+    display: grid;
+    grid-gap: 6px;
+    padding: 12px;
+    grid-template-columns: repeat(5, 1fr);
+    box-sizing: border-box;
+  }
+  
+  .square {
+    border: 2px solid rgb(58, 58, 60);
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 37px;
+    font-weight: bold;
+    color: rgb(221, 219, 219);
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* @media only screen and (max-width: 300px) {
+    .square {
+      border: 2px solid rgb(58, 58, 60);
+      min-width: 30px;
+      min-height: 30px;
+      font-size: 50px;
+      font-weight: bold;
+      color: rgb(66, 18, 18);
+      text-transform: uppercase;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  } */
+
+  #keypad-container {
+      height: 200px;
+  }
+
+  .keypad-row {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto 8px;
+      touch-action: manipulation;
+  }
+
+  .keypad-row button {
+      font-weight: bold;
+      border: 0;
+      height: 53px;
+      cursor: pointer;
+      background-color: rgb(192, 189, 189);
+      margin: 3px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      flex-grow: 1;
+      user-select: none;
+  }
+
+  .space {
+    flex-grow: 0.5;
+  }
+
+  .keypad-row button.wide-btn {
+    flex-grow: 1.5;
+  }

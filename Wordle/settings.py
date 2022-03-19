@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'm=p)vf30e%c#kf=%thc)0)$-yen+&-jf+dhx3(ra$$#=9pnl5n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['wordle-game-clone.herokuapp.com']
 
